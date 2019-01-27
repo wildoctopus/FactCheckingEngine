@@ -27,14 +27,14 @@ def check_wikipedia(entities):
         # multiple search result
         return 0
     except:
-        return -1
+        return 0
 
     for entity in entities[1:]:
         if entity.strip():
             if content.find(entity) > -1:
                 weight = 1
             else:
-                return -1
+                return 0
     return weight
 
 
