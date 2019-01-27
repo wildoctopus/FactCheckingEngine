@@ -6,7 +6,18 @@ class TtlGenerator:
 
     def __init__(self, filename):
         self.filename = filename
-        self.f = open(filename + '.ttl', "w")
+
+        fileName = Path("output/"+filename + ".ttl")
+
+        if fileName.is_file():
+            self.f = open("output/" + filename + '.ttl', "w")
+        else:
+            try:
+                os.makedirs(os.path.dirname(fileName))
+                self.f = open("output/" + filename + '.ttl', "w")
+            except OSError as exc:  # Guard against race condition
+                if exc.errno != errno.EEXIST:
+                    raise
 
     def addfact(self, factid, confidence):
         self.f.write('<http://swc2017.aksw.org/task2/dataset/' + factid + '> '
