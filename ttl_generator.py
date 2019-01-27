@@ -18,6 +18,8 @@ class TtlGenerator:
             except OSError as exc:  # Guard against race condition
                 if exc.errno != errno.EEXIST:
                     raise
+                else:
+                    self.f = open("output/" + filename + '.ttl', "w")
 
     def addfact(self, factid, confidence):
         self.f.write('<http://swc2017.aksw.org/task2/dataset/' + factid + '> '
