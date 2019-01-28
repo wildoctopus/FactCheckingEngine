@@ -39,9 +39,9 @@ SNLP
     * example : 
 
     ```
-    python3 create_corpus.py enwiki-latest-pages-articles.xml.bz2 wiki_en.txt
+    python3 create_corpus.py enwiki-latest-pages-articles.xml.bz2
     ```
-* We created our own grammar which helps us to extract name and entity from the sentence and then we seach in wikipedia with the help of name and entity.    
+* We created our own grammar which helps us to extract name and entity from the sentence and then we search in wikipedia with the help of name and entity.    
 
 
 ## Running the tests
