@@ -10,7 +10,7 @@ SNLP
 | Name                  | Matriculation Number |
 | --------------------- | -------------------- |
 | Ashish Kumar Shukla   | 6844552              |
-| Alok Pandey           | 6854287              |
+| Alok Kumar Pandey     | 6854287              |
 
 
 ### Prerequisites : 
@@ -48,7 +48,7 @@ python3 setup.py
     * example : 
 
     ```
-    python3 create_corpus.py enwiki-latest-pages-articles.xml.bz2 wiki_en.txt
+    python3 create_corpus.py enwiki-latest-pages-articles.xml.bz2
     ```    
 * Once the corpus is created we can validate the corpus with validate_corpus.py
 
