@@ -1,6 +1,6 @@
 # Fact Checker
 
-Fact checker based on Wikipedia corpus , done using NLTK and Wikipedia packages
+Fact checker - A Fact Checking Engine (Universität Paderborn Semester Project)  based on Wikipedia corpus , developed using NLTK and Wikipedia packages.
 
 ## Team Name
 SNLP
@@ -14,24 +14,21 @@ SNLP
 
 
 ### Prerequisites : 
-
 * Python3
 * Pip3 
-* NLTK
-* Wikipedia 
-
 
 ## Setup Guide :
-
-* Install packages using setup.py , setup.py installs rlated packages like nltk and other packages required to execute the project. 
+* Upgrade pip version with the current one. Execute below command - 
+```
+python3 -m pip install -U pip
+```
+* Run setup.py to Install project related packages like nltk, wikipedia and other mentioned in requirements.txt. 
 
 ```
 python3 setup.py
 ```
 
 ## Corpus Creation and Validation
-
-* If the wikipedia corpus is created locally we do the fact checking according to the local corpus otherwise Wikikipedia python package is used for fact checking.
 
 * Local Corpus Creation
     
@@ -45,7 +42,7 @@ python3 setup.py
 
     * It might take several hours if you are trying to do it on cpu power.
     
-    * example : 
+    * Execute below command on terminal : 
 
     ```
     python3 create_corpus.py enwiki-latest-pages-articles.xml.bz2
@@ -55,14 +52,15 @@ python3 setup.py
     ```
     python3 validate_corpus.py
     ```
+* If the wikipedia corpus is created locally we do the fact checking according to the local corpus otherwise Wikikipedia python package is used for fact checking.
 
 ## Running the tests
 
-* for train data
+* For train data
 ```
     pthon3 fact_checker.py train 
 ```
-* for test data
+* For test data
 ```
     pthon3 fact_checker.py test  
 ``` 
