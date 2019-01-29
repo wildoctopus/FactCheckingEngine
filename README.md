@@ -52,7 +52,7 @@ python3 setup.py
     ```
     python3 validate_corpus.py
     ```
-* If the wikipedia corpus is created locally we do the fact checking according to the local corpus otherwise Wikikipedia python package is used for fact checking.
+* If the wikipedia corpus is created locally we do the fact checking according to the local corpus otherwise Wikikipedia python package is used for fact checking.So in our project as processing of such a huge corpus consume more GPU and CPU power, we have used wikipedia package.
 
 ## Running the tests
 
