@@ -72,5 +72,17 @@ First we start with Tokenization , Given a character sequence and a defined docu
 Then we do POS Tagging , A Part-Of-Speech Tagger (POS Tagger)  reads text in some language and assigns parts of speech to each word (and other token), such as noun, verb, adjective, etc. 
 
 After that we implement noun phrase chunking to identify named entities , also know as NER recognition. 
+To efficiently identify NE we have wrote our own grammer - 
+```
+    grammar = r"""
+    NBAR:
+        # Nouns and Adjectives, terminated with Nouns
+        {<NN.*>*<NN.*>}
+    NP:
+        {<NBAR>}
+        # Above, connected with in/of/etc...
+        {<NBAR><IN><NBAR>}
+    """  
+```
 
 Once we have named entities values we search the Wikipedia using the NE values. We take the first value from NE which is the subject , search it in the Wikipedia. It gives us the page of the subject an once we get the page , we search for other entities in the page , if the search is successful , our fact is TRUE otherwise its false. 
