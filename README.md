@@ -86,3 +86,19 @@ To efficiently identify NE we have wrote our own grammer -
 ```
 
 Once we have named entities values we search the Wikipedia using the NE values. We take the first value from NE which is the subject , search it in the Wikipedia. It gives us the page of the subject an once we get the page , we search for other entities in the page , if the search is successful , our fact is TRUE otherwise its false. 
+
+Below are few examples of FN and TN, that are not part of Train or test Data - 
+    *False Positive Examples
+        *Microsoft's appllication was Albuquerque, New Mexico.
+        *Larry Page is Google’s CEO
+        *Virat Kohli is Hockey player
+        *Mukesh Ambani is son of Nita Ambani
+        *Shah Rukh Khan was born in Pakistan
+        
+    *True Negative Examples
+        *I love India
+        *Sachin Tendulkar’s birth place is Mumbai India
+        *Mahatma Gandhi’s death place is India
+        *Narendra Modi was a TeaMaker
+        *Rahul Gandhi is Cambridge graduate
+     
