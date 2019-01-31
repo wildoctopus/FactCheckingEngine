@@ -97,7 +97,7 @@ Below are few examples of FN and TN, that are not part of Train or test Data -
         *Shah Rukh Khan was born in Pakistan
         
     *False Negative Examples
-        *I love India
+        *Bhagat Singh was a freedom Fighter
         *Sachin Tendulkar’s birth place is Mumbai India
         *Mahatma Gandhi’s death place is India
         *Narendra Modi was a TeaMaker
